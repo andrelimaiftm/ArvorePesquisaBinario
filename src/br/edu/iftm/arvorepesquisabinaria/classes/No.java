@@ -1,9 +1,9 @@
 package br.edu.iftm.arvorepesquisabinaria.classes;
 
 public class No {
-    No noEsquerdo;
-    int valor;// valor que arvore vai armazenar
-    No noDireito;
+    public No noEsquerdo;
+    public int valor;// valor que arvore vai armazenar
+    public No noDireito;
 
     // metodo construtor da classe Nó
     public No(int valor) {
@@ -23,12 +23,12 @@ public class No {
             } else {// contiua percorrendo subárvore esquerda
                 this.noEsquerdo.insereNo(valorIsercao);
             }
-            //insere na subárvore direita
+            // insere na subárvore direita
         } else if (valorIsercao > this.valor) {
-            //insere um novo Nó
-            if(this.noDireito == null){
+            // insere um novo Nó
+            if (this.noDireito == null) {
                 this.noDireito = new No(valorIsercao);
-            }else{// contiua percorrendo subárvore direita
+            } else {// contiua percorrendo subárvore direita
                 this.noDireito.insereNo(valorIsercao);
             }
         }
